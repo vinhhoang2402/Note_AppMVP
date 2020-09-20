@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Note_AppMVP</string>
+    <string name="note">Nhap note</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="date">2020-06-16</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+    <string name="Update">Update</string>
+</resources>

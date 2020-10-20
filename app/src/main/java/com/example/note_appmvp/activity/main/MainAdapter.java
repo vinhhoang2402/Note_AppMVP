@@ -1,5 +1,6 @@
 package com.example.note_appmvp.activity.main;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,10 +42,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHoder>
         Note note=noteList.get(position);
         holder.txt_title.setText(note.getTitle());
         holder.txt_note.setText(note.getNote());
-        SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy/MM/dd");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy/MM/dd");
         try {
-            Date d=dateFormat.parse(note.getDate());
-            holder.txt_date.setText(dateFormat.format(d));
+            Date date=dateFormat.parse(note.getDate());
+            if (date != null) {
+                holder.txt_date.setText(dateFormat.format(date));
+            }
         }
         catch(Exception e) {
             System.out.println("Excep"+e);

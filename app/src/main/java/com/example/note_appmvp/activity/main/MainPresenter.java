@@ -5,9 +5,7 @@ import android.util.Log;
 import com.example.note_appmvp.api.ApiClient;
 import com.example.note_appmvp.api.ApiInterface;
 import com.example.note_appmvp.model.Note;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -35,7 +33,6 @@ public class MainPresenter {
             public void onFailure(Call<List<Note>> call, Throwable t) {
                 view.showLoading();
                 Log.d("vinhhoag",t.getMessage());
-
             }
         });
     }

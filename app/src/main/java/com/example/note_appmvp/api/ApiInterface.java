@@ -1,5 +1,9 @@
 package com.example.note_appmvp.api;
 
+import android.database.Observable;
+
+import androidx.lifecycle.Observer;
+
 import com.example.note_appmvp.model.Note;
 import com.example.note_appmvp.model.User;
 
